@@ -17,12 +17,13 @@ export default class Home extends TrackerReact(Component) {
 
   render() {
     return (
-      <div className="Container">
-
-        <h1>HOME PAGE</h1>
-
+      <div className="container">
+        <div className="center">
+          <h2 className="te">Ivan Baena <br />
+            <small>Web Developer</small>
+          </h2>
+        </div>
       </div>
-
     )
   }
 }

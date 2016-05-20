@@ -30,5 +30,6 @@ stolinski:stylus-multi
 
 accounts-ui
 accounts-password
-materialize:materialize
 http
+fortawesome:fontawesome
+materialize:materialize
