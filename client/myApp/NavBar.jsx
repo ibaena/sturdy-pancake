@@ -12,22 +12,24 @@ export default class NavBar extends TrackerReact(Component) {
   }
 
  componentDidMount(){
-
+   $('.button-collapse').sideNav({
+   menuWidth: 220, // Default is 240
+   edge: 'left', // Choose the horizontal origin
+   closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+ }
+);
 
  }
 
   render() {
     return (
-      <nav className="transparent">
-        <div className="nav-wrapper">
-          <a href="#" className="brand-logo right">Logo</a>
-          <ul id="nav-mobile" className="left hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">JavaScript</a></li>
-          </ul>
-        </div>
-      </nav>
+      <nav className="transparent" >
+        <ul id="slide-out" className="side-nav fixed">
+           <li><a href="#!">First Sidebar Link</a></li>
+           <li><a href="#!">Second Sidebar Link</a></li>
+         </ul>
+         <a href="#" data-activates="slide-out" className="button-collapse"><i className="mdi-navigation-menu"></i></a>
+  </nav>
 
     )
   }

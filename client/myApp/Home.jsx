@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import TrackerReact from 'meteor/ultimatejs:tracker-react';
 
+import Landing from './/Landing.jsx';
+import About from './About.jsx';
+
+
 
 export default class Home extends TrackerReact(Component) {
 
@@ -12,17 +16,17 @@ export default class Home extends TrackerReact(Component) {
   }
 
  componentDidMount(){
-
  }
 
   render() {
     return (
-      <div className="container">
-        <div className="center">
-          <h2 className="te">Ivan Baena <br />
-            <small>Web Developer</small>
-          </h2>
+      <div id="wrapper">
+        <Landing />
+        <div className="container">
+          <About />
+
         </div>
+
       </div>
     )
   }
