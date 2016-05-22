@@ -14,7 +14,7 @@ export default class Landing extends TrackerReact(Component) {
   }
   animate(){
       console.log("i click");
-    $('html, body').animate({scrollTop: '150px'}, 800);
+    $('html, body').animate({scrollTop: '300px'}, 1000);
   }
 
  componentDidMount(){
@@ -27,7 +27,7 @@ export default class Landing extends TrackerReact(Component) {
       <div className="parallax-container">
 
         <div className="parallax">
-          <img src=""  />
+          <img src="http://usedgrooves.com/wp-content/uploads/2013/09/anigif_enhanced-buzz-7434-1376587963-6.gif"  />
         </div>
           <ul  className="center-align" id="introbtns">
             <li> <button onClick={this.animate} className="btn-floating btn-large waves-effect waves-light transparent" id="pullup"><i className="fa fa-arrow-circle-o-up fa-3x" aria-hidden="true"></i></button></li>
