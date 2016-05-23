@@ -14,7 +14,7 @@ export default class Landing extends TrackerReact(Component) {
   }
   animate(){
       console.log("i click");
-    $('html, body').animate({scrollTop: '300px'}, 1000);
+    $('html, body').animate({scrollTop: '400px'}, 1000);
   }
 
  componentDidMount(){

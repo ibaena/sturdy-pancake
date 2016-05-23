@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import TrackerReact from 'meteor/ultimatejs:tracker-react';
 
+Portfolio = new Mongo.Collection("portfolio");
 
 export default class About extends TrackerReact(Component) {
 
@@ -9,18 +10,44 @@ export default class About extends TrackerReact(Component) {
   constructor() {
     super();
 
+    this.state = {
+      subscription: {
+        about: Meteor.subscribe("About")
+      }
+    };
   }
 
  componentDidMount(){
 
  }
 
+ componentWillUnmount() {
+     this.state.subscription.about.stop();
+ }
+
+
+   AboutMe() {
+     return Portfolio.find({}).fetch();
+   }
+
   render() {
+    console.log(this.AboutMe());
     return (
       <div className="section white" id="about">
         <div className="row container">
-          <h2 className="header">Parallax</h2>
-          <p className="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+          {
+            this.AboutMe().map((item) => {
+              return(
+                <div id="about" key={item._id}>
+                  <h3>{item.first_name} {item.last_name}</h3>
+                  <p>{item.headline}</p>
+                  <section>
+                    {item.long_bio}
+                  </section>
+                </div>
+              )})
+          }
+
         </div>
       </div>
     )

@@ -4,6 +4,8 @@ import TrackerReact from 'meteor/ultimatejs:tracker-react';
 
 import Landing from './/Landing.jsx';
 import About from './About.jsx';
+import Header from './Header.jsx';
+
 
 
 
@@ -21,6 +23,7 @@ export default class Home extends TrackerReact(Component) {
   render() {
     return (
       <div id="wrapper">
+        <Header />
         <Landing />
         <div className="container">
           <About />
