@@ -11,14 +11,21 @@ export default class BtmModal extends TrackerReact(Component) {
 
   }
 
+  stopPlayer(){
+    $("#audio-player").attr("src","");
+  }
+  startPlayer(){
+    let video ="https://www.youtube.com/embed/y1qfq0sz_GM?rel=0&autoplay=1";
+    $("#audio-player").attr("src",video);
+  }
+
  componentDidMount(){
    $('.modal-trigger').leanModal({
      dismissible: true, // Modal can be dismissed by clicking outside of the modal
-     opacity: .5, // Opacity of modal background
+     opacity: .4, // Opacity of modal background
      in_duration: 300, // Transition in duration
      out_duration: 200, // Transition out duration
-     ready: function() { alert('Ready'); }, // Callback for Modal open
-     complete: function() { alert('Closed'); } // Callback for Modal close
+
    }
  );
 
@@ -30,11 +37,13 @@ export default class BtmModal extends TrackerReact(Component) {
 
       <div id="modal1" className="modal bottom-sheet">
         <div className="modal-content">
-          <h4>Modal Header</h4>
-          <p>A bunch of text</p>
+              <iframe width="100%" height="140" id="audio-player"
+                src="https://www.youtube.com/embed/i7wUWa723dw?rel=0&autoplay=1" frameborder="0">
+              </iframe>
         </div>
         <div className="modal-footer">
-          <a href="#!" className=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+          <a href="#!" className=" modal-action modal-close waves-effect waves-green btn-flat" onClick={this.startPlayer}>Close</a>
+          <a href="#!" className=" modal-action modal-close waves-effect waves-green btn-flat" onClick={this.stopPlayer}>Close</a>
         </div>
       </div>
 

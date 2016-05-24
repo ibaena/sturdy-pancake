@@ -30,6 +30,11 @@ export default class SideNav extends TrackerReact(Component) {
        scrollTop: $("#projects").offset().top
    }, 2000);
  }
+ footer(){
+   $('html, body').animate({
+       scrollTop: $("#footer").offset().top
+   }, 2000);
+ }
 
   render() {
     return (
@@ -37,7 +42,7 @@ export default class SideNav extends TrackerReact(Component) {
            <li className="center-align menu" id="first-menu"><a href="#" onClick={this.about}><i className="fa fa-odnoklassniki fa-2x" aria-hidden="true"></i></a></li>
            <li className="center-align menu"><a href="#!" onClick={this.projects}><i className="fa fa-rocket fa-2x" aria-hidden="true"></i></a></li>
            <li className="center-align menu"><a href="#modal1" className="modal-trigger"><i className="fa fa-bolt fa-2x" aria-hidden="true"></i></a></li>
-           <li className="center-align menu"><a href="#!"><i className="fa fa-wrench fa-2x" aria-hidden="true"></i></a></li>
+           <li className="center-align menu"><a href="#!"onClick={this.footer}><i className="fa fa-wrench fa-2x" aria-hidden="true"></i></a></li>
          </ul>
 
 
