@@ -33,7 +33,6 @@ export default class SideNav extends TrackerReact(Component) {
 
   render() {
     return (
-
         <ul id="slide-out" className="side-nav fixed">
            <li className="center-align menu" id="first-menu"><a href="#" onClick={this.about}><i className="fa fa-odnoklassniki fa-2x" aria-hidden="true"></i></a></li>
            <li className="center-align menu"><a href="#!" onClick={this.projects}><i className="fa fa-rocket fa-2x" aria-hidden="true"></i></a></li>

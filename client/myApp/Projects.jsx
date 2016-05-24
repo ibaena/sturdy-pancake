@@ -33,7 +33,8 @@ export default class Projects extends TrackerReact(Component) {
     return (
 
       <div className="section blue" id="projects">
-        <div className="row container">
+        <div className="container">
+          <div className="row">
 
                 <ul id="showcase">
                   {
@@ -45,13 +46,14 @@ export default class Projects extends TrackerReact(Component) {
                           <div className="card">
                             <div className="card-image">
                               <img src={item.image} className="responsive-img projectImgs"/>
-                                <span className="card-title">{item.title}</span>
+                                <span className="card-title black-text">{item.title}</span>
                               </div>
                               <div className="card-content">
                                 <p>{item.description}</p>
                               </div>
                               <div className="card-action">
-                                <a href={item.github}><i className="fa fa-github" aria-hidden="true"></i></a>
+                                <a href={item.github}><i className="fa fa-github fa-2x" aria-hidden="true"></i></a>
+                                <a href={item.url}><i className="fa fa-play fa-2x" aria-hidden="true"></i></a>
                               </div>
                             </div>
                           </li>
@@ -60,6 +62,7 @@ export default class Projects extends TrackerReact(Component) {
                   }
 
                 </ul>
+              </div>
         </div>
       </div>
 

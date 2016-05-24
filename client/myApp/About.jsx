@@ -33,7 +33,8 @@ export default class About extends TrackerReact(Component) {
   render() {
     return (
       <div className="section white" id="about">
-        <div className="row container">
+        <div className="container">
+          <div className="row">
           {
             this.AboutMe().map((item) => {
               return(
@@ -49,7 +50,7 @@ export default class About extends TrackerReact(Component) {
                 </div>
               )})
           }
-
+          </div>
         </div>
       </div>
     )

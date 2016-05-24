@@ -12,20 +12,16 @@ export default class Header extends TrackerReact(Component) {
   }
 
  componentDidMount(){
-   $('.button-collapse').sideNav({
-   menuWidth: 220, // Default is 240
-   edge: 'left', // Choose the horizontal origin
- }
-);
+
 
  }
 
   render() {
     return (
 
-      <nav className="transparent">
+      <nav className="transparent hide-on-large-only">
         <div className="nav-wrapper">
-          <a href="#" className="brand-logo center black-text">Ivan Baena</a>
+           <a href="#" data-activates="slide-out" className="button-collapse"><i className="mdi-navigation-menu"></i></a>
         </div>
       </nav>
 
