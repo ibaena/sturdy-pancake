@@ -1,4 +1,6 @@
 Portfolio = new Mongo.Collection("portfolio");
+Projects = new Mongo.Collection("projects");
+
 
 if (Portfolio.find({}).count() === 0) {
     Portfolio.insert({
@@ -22,6 +24,12 @@ if (Portfolio.find({}).count() === 0) {
     });
 }
 
+
+
 Meteor.publish("About", function() {
   return Portfolio.find();
+});
+
+Meteor.publish("MyWork", function() {
+  return Projects.find();
 });

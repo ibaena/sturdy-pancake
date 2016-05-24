@@ -31,7 +31,6 @@ export default class About extends TrackerReact(Component) {
    }
 
   render() {
-    console.log(this.AboutMe());
     return (
       <div className="section white" id="about">
         <div className="row container">
@@ -42,6 +41,9 @@ export default class About extends TrackerReact(Component) {
                   <h3>{item.first_name} {item.last_name}</h3>
                   <p>{item.headline}</p>
                   <section>
+                    {item.bio_short}
+                    {item.aim}<br /><br />
+                    {item.aim2}<br /><br />
                     {item.long_bio}
                   </section>
                 </div>
