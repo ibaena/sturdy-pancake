@@ -38,7 +38,7 @@ export default class About extends TrackerReact(Component) {
           {
             this.AboutMe().map((item) => {
               return(
-                <div id="about" key={item._id}>
+                <div id="about-section" key={item._id}>
                   <h3>{item.first_name} {item.last_name}</h3>
                   <p>{item.headline}</p>
                   <section>

@@ -6,6 +6,8 @@ import Landing from './/Landing.jsx';
 import About from './About.jsx';
 import Projects from './Projects.jsx';
 import Header from './Header.jsx';
+import Footer from './Footer.jsx';
+import BtmModal from './BtmModal.jsx';
 
 
 
@@ -24,12 +26,14 @@ export default class Home extends TrackerReact(Component) {
   render() {
     return (
       <div id="wrapper">
-        
+
         <Landing />
 
         <About />
         <Projects />
 
+        <BtmModal />
+        <Footer />
       </div>
     )
   }

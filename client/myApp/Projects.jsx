@@ -43,7 +43,7 @@ export default class Projects extends TrackerReact(Component) {
 
                       return(
                         <li  key={item._id}>
-                          <div className="card">
+                          <div className="card hoverable">
                             <div className="card-image">
                               <img src={item.image} className="responsive-img projectImgs"/>
                                 <span className="card-title black-text">{item.title}</span>

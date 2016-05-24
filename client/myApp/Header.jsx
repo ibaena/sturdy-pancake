@@ -21,7 +21,7 @@ export default class Header extends TrackerReact(Component) {
 
       <nav className="transparent hide-on-large-only">
         <div className="nav-wrapper">
-           <a href="#" data-activates="slide-out" className="button-collapse"><i className="mdi-navigation-menu"></i></a>
+           <a href="#" data-activates="slide-out" className="button-collapse right" id="burger-mobile"><i className="mdi-navigation-menu"></i></a>
         </div>
       </nav>
 
