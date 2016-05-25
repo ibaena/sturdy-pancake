@@ -1,5 +1,6 @@
 Portfolio = new Mongo.Collection("portfolio");
 Projects = new Mongo.Collection("projects");
+Contact = new Mongo.Collection("contact");
 
 
 if (Portfolio.find({}).count() === 0) {
