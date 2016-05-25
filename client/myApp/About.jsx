@@ -16,6 +16,10 @@ export default class About extends TrackerReact(Component) {
       }
     };
   }
+  
+  AboutMe() {
+    return Portfolio.find({}).fetch();
+  }
 
  componentDidMount(){
 
@@ -26,9 +30,7 @@ export default class About extends TrackerReact(Component) {
  }
 
 
-   AboutMe() {
-     return Portfolio.find({}).fetch();
-   }
+
 
   render() {
     return (
