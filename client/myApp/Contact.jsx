@@ -34,13 +34,13 @@ export default class Contact extends TrackerReact(Component) {
             </div>
             <div className="input-field col s12">
               <i className="material-icons prefix">email</i>
-              <input id="icon_telephone" type="tel" className="validate" />
-                <label for="icon_telephone">Telephone</label>
+              <input id="icon_telephone" type="email" className="validate" />
+                <label for="icon_telephone">Email</label>
             </div>
             <div className="input-field col s12">
               <i className="material-icons prefix">message</i>
                 <textarea id="textarea1" className="materialize-textarea"></textarea>
-                <label for="textarea1">Textarea</label>
+                <label for="textarea1">Message</label>
             </div>
           </form>
         </div>
