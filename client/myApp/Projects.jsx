@@ -51,8 +51,8 @@ export default class Projects extends TrackerReact(Component) {
                                 <p>{item.description}</p>
                               </div>
                               <div className="card-action">
-                                <a href={item.github}><i className="fa fa-github fa-2x" aria-hidden="true"></i></a>
-                                <a href={item.url}><i className="fa fa-play fa-2x" aria-hidden="true"></i></a>
+                                <a href={item.github} target="_blank"><i className="fa fa-github fa-2x" aria-hidden="true"></i></a>
+                                <a href={item.url} target="_blank"><i className="fa fa-play fa-2x" aria-hidden="true"></i></a>
                               </div>
                             </div>
                           </li>

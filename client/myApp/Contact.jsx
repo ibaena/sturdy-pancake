@@ -38,6 +38,7 @@ export default class Contact extends TrackerReact(Component) {
 
       <div className="card-panel white">
         <div className="row">
+          
           <form onSubmit={this.submitContact.bind(this)}>
             <div className="input-field col s12">
               <i className="material-icons prefix">account_circle</i>
@@ -59,10 +60,13 @@ export default class Contact extends TrackerReact(Component) {
                 <textarea id="textarea1" className="materialize-textarea"  ref="message" ></textarea>
                 <label for="textarea1">Message</label>
             </div>
-            <button className="btn waves-effect waves-light transparent" type="submit" name="action">Submit
-              <i className="material-icons right">send</i>
-            </button>
+            <div className="input-field col s12">
+              <button className="btn waves-effect waves-light transparent black-text" type="submit" name="action">Submit
+                <i className="material-icons right">send</i>
+              </button>
+            </div>
           </form>
+
         </div>
       </div>
 
