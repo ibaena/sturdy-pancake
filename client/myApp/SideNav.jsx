@@ -23,17 +23,17 @@ export default class SideNav extends TrackerReact(Component) {
  about(){
    $('html, body').animate({
        scrollTop: $("#about").offset().top
-   }, 2000);
+   }, 1800);
  }
  projects(){
    $('html, body').animate({
        scrollTop: $("#projects").offset().top
-   }, 2000);
+   }, 1800);
  }
  footer(){
    $('html, body').animate({
        scrollTop: $("#footer").offset().top
-   }, 2000);
+   },2000);
  }
 
   render() {

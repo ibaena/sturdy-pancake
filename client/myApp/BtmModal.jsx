@@ -11,12 +11,21 @@ export default class BtmModal extends TrackerReact(Component) {
 
   }
 
-  stopPlayer(){
+  seventiesPlayer(){
+    let seventies = "https://www.youtube.com/embed/videoseries?list=PLxTAIaK898woRSx55Y2XvUIwxHc8dJblW";
     $("#audio-player").attr("src","");
+    $("#audio-player").attr("src",seventies);
   }
-  startPlayer(){
-    let video ="https://www.youtube.com/embed/y1qfq0sz_GM?rel=0&autoplay=1";
+  oldiesPlayer(){
+    let video = "https:/www.youtube.com/embed/videoseries?list=PLxTAIaK898wqdwWQaBBK88ccQuXKAcNvz";
+      $("#audio-player").attr("src","");
     $("#audio-player").attr("src",video);
+  }
+  beatsPlayer(){
+    console.log('what');
+    let beats = "https://www.youtube.com/embed/videoseries?list=PLxTAIaK898wo_ri8RNY4PrcL6lxt8MsyL";
+      $("#audio-player").attr("src","");
+    $("#audio-player").attr("src",beats);
   }
 
  componentDidMount(){
@@ -37,13 +46,15 @@ export default class BtmModal extends TrackerReact(Component) {
 
       <div id="modal1" className="modal bottom-sheet">
         <div className="modal-content">
-              <iframe width="100%" height="140" id="audio-player"
-                src="https://www.youtube.com/embed/i7wUWa723dw?rel=0&autoplay=1" frameborder="0">
-              </iframe>
+          <iframe width="100%" height="200" id="audio-player"
+            src="https://www.youtube.com/embed/videoseries?list=PLxTAIaK898wo_ri8RNY4PrcL6lxt8MsyL" frameborder="0" allowfullscreen>
+          </iframe>
         </div>
         <div className="modal-footer">
-          <a href="#!" className=" modal-action modal-close waves-effect waves-green btn-flat" onClick={this.startPlayer}>Close</a>
-          <a href="#!" className=" modal-action modal-close waves-effect waves-green btn-flat" onClick={this.stopPlayer}>Close</a>
+          <a href="#!" className="  waves-effect waves-green btn-flat" onClick={this.beatsPlayer}>Beats</a>
+          <a href="#!" className="  waves-effect waves-green btn-flat" onClick={this.oldiesPlayer}>Oldies</a>
+          <a href="#!" className="  waves-effect waves-green btn-flat" onClick={this.seventiesPlayer}>70's</a>
+          <a href="#!" className=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
         </div>
       </div>
 

@@ -39,7 +39,6 @@ export default class Projects extends TrackerReact(Component) {
                 <ul id="showcase">
                   {
                     this.projects().map((item) => {
-                      console.log(item);
 
                       return(
                         <li  key={item._id}>
