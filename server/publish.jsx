@@ -1,5 +1,5 @@
 Portfolio = new Mongo.Collection("portfolio");
-Projects = new Mongo.Collection("projects");
+Showcase = new Mongo.Collection("projects");
 Contact = new Mongo.Collection("contact");
 
 
@@ -32,5 +32,5 @@ Meteor.publish("About", function() {
 });
 
 Meteor.publish("MyWork", function() {
-  return Projects.find();
+  return Showcase.find();
 });

@@ -35,7 +35,7 @@ export default class Projects extends TrackerReact(Component) {
       <div className="section blue" id="projects">
         <div className="container">
           <div className="row">
-
+            <h3 className="center-align white-text">Projects</h3>
                 <ul id="showcase">
                   {
                     this.projects().map((item) => {

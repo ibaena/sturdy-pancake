@@ -38,7 +38,6 @@ export default class Contact extends TrackerReact(Component) {
 
       <div className="card-panel white">
         <div className="row">
-          
           <form onSubmit={this.submitContact.bind(this)}>
             <div className="input-field col s12">
               <i className="material-icons prefix">account_circle</i>
