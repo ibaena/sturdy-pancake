@@ -42,8 +42,8 @@ export default class SideNav extends TrackerReact(Component) {
  }
  alertAudio(){
    Bert.alert({
-   title: 'Now Playing',
-   message: 'Playlists I listen to when coding',
+   title: 'Listen to Music',
+   message: 'While you browse!',
    type: 'info',
    style: 'growl-top-right',
    icon: 'fa-music'

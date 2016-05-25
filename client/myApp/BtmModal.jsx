@@ -13,17 +13,37 @@ export default class BtmModal extends TrackerReact(Component) {
 
   seventiesPlayer(){
     let seventies = "https://www.youtube.com/embed/videoseries?list=PLxTAIaK898woRSx55Y2XvUIwxHc8dJblW";
+    Bert.alert({
+    title: 'Now Playing',
+    message: '70s Playlist',
+    type: 'info',
+    style: 'growl-top-right',
+    icon: 'fa-music'
+  });
     $("#audio-player").attr("src","");
     $("#audio-player").attr("src",seventies);
   }
   oldiesPlayer(){
-    let video = "https:/www.youtube.com/embed/videoseries?list=PLxTAIaK898wqdwWQaBBK88ccQuXKAcNvz";
+    let video = "https://www.youtube.com/embed/videoseries?list=PLxTAIaK898wqdwWQaBBK88ccQuXKAcNvz";
+    Bert.alert({
+    title: 'Now Playing',
+    message: 'Oldies Playlist',
+    type: 'info',
+    style: 'growl-top-right',
+    icon: 'fa-music'
+  });
       $("#audio-player").attr("src","");
     $("#audio-player").attr("src",video);
   }
   beatsPlayer(){
-    console.log('what');
     let beats = "https://www.youtube.com/embed/videoseries?list=PLxTAIaK898wo_ri8RNY4PrcL6lxt8MsyL";
+    Bert.alert({
+    title: 'Now Playing',
+    message: 'Beats Playlist',
+    type: 'info',
+    style: 'growl-top-right',
+    icon: 'fa-music'
+  });
       $("#audio-player").attr("src","");
     $("#audio-player").attr("src",beats);
   }
