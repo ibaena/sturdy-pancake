@@ -51,10 +51,10 @@ export default class BtmModal extends TrackerReact(Component) {
           </iframe>
         </div>
         <div className="modal-footer">
-          <a href="#!" className="  waves-effect waves-green btn-flat" onClick={this.beatsPlayer}>Beats</a>
-          <a href="#!" className="  waves-effect waves-green btn-flat" onClick={this.oldiesPlayer}>Oldies</a>
-          <a href="#!" className="  waves-effect waves-green btn-flat" onClick={this.seventiesPlayer}>70's</a>
-          <a href="#!" className=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+          <a href="" className="  waves-effect waves-green btn-flat" onClick={this.beatsPlayer}>Beats</a>
+          <a href="" className="  waves-effect waves-green btn-flat" onClick={this.oldiesPlayer}>Oldies</a>
+          <a href="" className="  waves-effect waves-green btn-flat" onClick={this.seventiesPlayer}>70's</a>
+          <a href="" className=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
         </div>
       </div>
 
