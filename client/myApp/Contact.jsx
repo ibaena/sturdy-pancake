@@ -18,18 +18,21 @@ export default class Contact extends TrackerReact(Component) {
 
  submitContact(event) {
    event.preventDefault();
+   console.log(this.refs);
    var name = this.refs.name.value.trim();
    var phone = this.refs.phone.value.trim();
    var email = this.refs.email.value.trim();
    var message = this.refs.message.value.trim();
    if (message) {
      Meteor.call('submitContact', name,phone,email,message, () => {
-
+       Bert.alert( 'Hooray! Your message is on the way! ', 'success', 'fixed-top', 'fa-thumbs-o-up' );
          this.refs.name.value = "";
          this.refs.phone.value = "";
          this.refs.email.value = "";
          this.refs.message.value = "";
      });
+   }else{
+     Bert.alert( 'Somewhere along the way things broke, lets tray again ', 'danger', 'fixed-top', 'fa-frown-o' );
    }
  }
 
@@ -41,22 +44,22 @@ export default class Contact extends TrackerReact(Component) {
           <form onSubmit={this.submitContact.bind(this)}>
             <div className="input-field col s12">
               <i className="material-icons prefix">account_circle</i>
-              <input id="icon_prefix" type="text" className="validate"  ref="name" />
-              <label for="icon_prefix">First Name</label>
+              <input id="icon_prefix" type="text" className="validate"  ref="name" required/>
+              <label for="icon_prefix">Name</label>
             </div>
             <div className="input-field col s12">
               <i className="material-icons prefix">phone</i>
               <input id="icon_telephone" type="tel" className="validate"  ref="phone" />
-                <label for="icon_telephone">Telephone</label>
+                <label for="icon_telephone">Telephone </label>
             </div>
             <div className="input-field col s12">
               <i className="material-icons prefix">email</i>
-              <input id="icon_telephone" type="email" className="validate"  ref="email"  />
-                <label for="icon_telephone">Email</label>
+              <input id="email" type="email" className="validate"  ref="email"  required />
+                <label for="email">Email</label>
             </div>
             <div className="input-field col s12">
               <i className="material-icons prefix">message</i>
-                <textarea id="textarea1" className="materialize-textarea"  ref="message" ></textarea>
+                <textarea id="textarea1" className="materialize-textarea"  ref="message" required></textarea>
                 <label for="textarea1">Message</label>
             </div>
             <div className="input-field col s12">

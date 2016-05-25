@@ -15,8 +15,8 @@ export default class SideNav extends TrackerReact(Component) {
    $('.button-collapse').sideNav({
    menuWidth: 220, // Default is 240
    edge: 'left', // Choose the horizontal origin
- }
-);
+    }
+  );
 
  }
 
@@ -35,13 +35,22 @@ export default class SideNav extends TrackerReact(Component) {
        scrollTop: $("#footer").offset().top
    },2000);
  }
+ alertAudio(){
+   Bert.alert({
+   title: 'Now Playing',
+   message: 'Playlists I listen to when coding',
+   type: 'info',
+   style: 'growl-top-right',
+   icon: 'fa-music'
+ });
+ }
 
   render() {
     return (
         <ul id="slide-out" className="side-nav fixed">
            <li className="center-align menu" id="first-menu"><a href="#" onClick={this.about}><i className="fa fa-odnoklassniki fa-2x" aria-hidden="true"></i></a></li>
            <li className="center-align menu"><a href="#!" onClick={this.projects}><i className="fa fa-wrench fa-2x" aria-hidden="true"></i></a></li>
-           <li className="center-align menu"><a href="#modal1" className="modal-trigger"><i className="fa fa-headphones fa-2x" aria-hidden="true"></i></a></li>
+           <li className="center-align menu"><a href="#modal1" className="modal-trigger" onClick={this.alertAudio}><i className="fa fa-headphones fa-2x" aria-hidden="true"></i></a></li>
            <li className="center-align menu"><a href="#!"onClick={this.footer}><i className="fa fa-commenting fa-2x" aria-hidden="true"></i></a></li>
          </ul>
 
