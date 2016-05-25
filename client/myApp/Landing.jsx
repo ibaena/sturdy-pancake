@@ -23,7 +23,7 @@ export default class Landing extends TrackerReact(Component) {
     return (
       <div className="parallax-container">
         <div className="parallax">
-          <img src="https://4.bp.blogspot.com/-yF8Y9yb04Rg/UYpIWKnK7PI/AAAAAAAAAM4/zjYjW9peWXQ/s1600/zzWUTT+promo.jpg" className="responsive-img"  />
+          <img src="/assets/landing.jpg" className="responsive-img"  />
         </div>
               <Header />
 
