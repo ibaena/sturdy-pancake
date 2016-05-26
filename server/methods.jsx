@@ -1,10 +1,10 @@
 Meteor.methods({
-  submitContact(name,message,phone,email) {
+  submitContact(name,phone,email,message) {
     Contact.insert({
       name: name,
+      phone: phone,
+      email:email,
       message: message,
-      phone:phone,
-      email: email,
       createdAt: new Date(),
     });
     this.refs.phone.value = "";
