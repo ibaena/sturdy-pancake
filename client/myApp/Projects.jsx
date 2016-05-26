@@ -45,14 +45,14 @@ export default class Projects extends TrackerReact(Component) {
                           <div className="card hoverable">
                             <div className="card-image">
                               <img src={item.image} className="responsive-img projectImgs"/>
-                                <span className="card-title black-text">{item.title}</span>
                               </div>
                               <div className="card-content">
+                                <span className="card-title black-text">{item.title}</span>
                                 <p>{item.description}</p>
                               </div>
                               <div className="card-action">
-                                <a href={item.github} target="_blank"><i className="fa fa-github fa-2x" aria-hidden="true"></i></a>
-                                <a href={item.url} target="_blank"><i className="fa fa-play fa-2x" aria-hidden="true"></i></a>
+                                <a href={item.github} className="btn-floating btn-large waves-effect waves-light transparent " target="_blank"><i className="fa fa-github fa-2x black-text" aria-hidden="true"></i></a>
+                                <a href={item.url} className="btn-floating btn-large waves-effect waves-light transparent " target="_blank"><i className="fa fa-play fa-2x black-text" aria-hidden="true"></i></a>
                               </div>
                             </div>
                           </li>
