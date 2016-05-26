@@ -18,7 +18,7 @@ export default class SideNav extends TrackerReact(Component) {
     }
   );
 
-   $('.tooltipped').tooltip({delay: 0});
+   $('.tooltipped').tooltip({delay: 20});
 
  }
 
@@ -57,7 +57,7 @@ export default class SideNav extends TrackerReact(Component) {
         <ul id="slide-out" className="side-nav fixed">
            <li className="center-align menu tooltipped" data-position="bottom" data-tooltip="To Top" id="first-menu"><a href="" onClick={this.top}><i className="fa fa-level-up fa-2x" aria-hidden="true"></i></a></li>
            <li className="center-align menu tooltipped" data-position="bottom" data-tooltip="About"><a href="" onClick={this.about}><i className="fa fa-odnoklassniki fa-2x" aria-hidden="true"></i></a></li>
-           <li className="center-align menu tooltipped" data-position="bottom" data-tooltip="Projects"><a href="" onClick={this.projects}><i className="fa fa-wrench fa-2x tooltipped" data-position="bottom" data-tooltip="Projects" aria-hidden="true"></i></a></li>
+           <li className="center-align menu tooltipped" data-position="bottom" data-tooltip="Projects"><a href="" onClick={this.projects}><i className="fa fa-wrench fa-2x" aria-hidden="true"></i></a></li>
            <li className="center-align menu tooltipped" data-position="bottom" data-tooltip="Music"><a href="" data-target="modal1" className="modal-trigger" onClick={this.alertAudio}><i className="fa fa-headphones fa-2x" aria-hidden="true"></i></a></li>
            <li className="center-align menu tooltipped" data-position="bottom" data-tooltip="Contact"><a href=""onClick={this.footer}><i className="fa fa-commenting fa-2x" aria-hidden="true"></i></a></li>
          </ul>
